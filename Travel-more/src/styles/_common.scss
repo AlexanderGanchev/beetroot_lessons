@@ -1,0 +1,22 @@
+.content-container {
+    max-width: 1110px;
+    width: 100%;
+    margin: 0 auto;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+  }
+  
+  .img-contain {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .img-cover {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+    display: block;
+  }

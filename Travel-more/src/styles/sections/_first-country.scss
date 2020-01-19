@@ -1,0 +1,61 @@
+@import "./../constants/index.scss";
+
+.first-country {
+    min-height: 100vh;
+    background: url(./../../build/assets/images/bgr3.png) center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    &__container {
+        min-height: 100vh;
+        padding: 230px 0 100px 0;
+
+        @media screen and (max-width: 1125px) {
+            padding: 230px 0 100px 25px;
+        }
+
+        @media screen and (max-width: 768px) {
+            padding: 165px 0 165px 0;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+    }
+
+    &__content-wrapper {
+        max-width: 540px;
+        max-height: 400px;
+        padding: 50px 30px;
+        background-color: $primaryBlockGrey;
+    }
+}
+
+.content-text {
+    &__country-title {
+        font-size: 20px;
+        color: $primaryLightGrey;
+        letter-spacing: 1.5px;
+        margin-bottom: 30px;
+    }
+
+    &__country-sub-title {
+        font-size: 20px;
+        color: $white;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
+
+    &__country-text {
+        font-size: 16px;
+        color: $primaryLightGrey;
+        font-weight: $fontWeightLight;
+        line-height: 26px;
+        margin-bottom: 45px;
+    }
+
+    &__button {
+        @media screen and (max-width: 768px) {
+            width: 100%;
+         }
+    }
+}

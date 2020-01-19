@@ -1,0 +1,51 @@
+@import "./../constants/index.scss";
+@import "./../mixins.scss";
+
+
+.content {
+      &__block {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background: url(./../../build/assets/images/Snowflake.png);
+        background-repeat: no-repeat;
+      }
+}
+
+.block {
+    width: calc((692px - 35px) /4 );
+}
+
+.content-block {
+    &__block {
+        display: flex;
+        justify-content: center;
+        max-width: 690px;
+        width: 100%;
+    }
+    &__block-img {
+        &--left {
+            padding: 200px 0;
+        }
+
+        &--right {
+            padding-bottom: 210px;
+        }
+    }
+}
+
+.text-content-block {
+    &__block {
+        display: flex;
+        justify-content: center;
+        max-width: 690px;
+        width: 100%;
+
+        &--left{
+            padding-left: 180px;
+            padding-top: 190px;
+        }
+    }
+
+    
+}

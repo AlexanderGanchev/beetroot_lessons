@@ -1,0 +1,13 @@
+@import "./../constants/index.scss";
+@import "./../mixins.scss";
+
+.gallery {
+    display: flex;
+    // flex-direction: row;
+    justify-content: center;
+    // flex-wrap: wrap;
+    max-width: 1920px;
+
+    &__container {
+    }
+}

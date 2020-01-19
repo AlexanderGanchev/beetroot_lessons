@@ -1,0 +1,21 @@
+@import "./../constants/index.scss";
+
+.title-block {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    line-height: 60px;
+
+    &__title {
+        font-size: 46px;
+        font-weight: $fontWeightMedium;
+      }
+
+    &__sub-title {
+        font-size: 18px;
+        font-weight: $fontWeightBase;
+        color: #4b5863;
+        opacity: 0.25;
+    }
+}

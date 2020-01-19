@@ -1,0 +1,88 @@
+@import "./../constants/index.scss";
+
+.about {
+    min-height: 100vh;
+    background: url(./../../build/assets/images/bgr2.png) center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; 
+
+    @media screen and (max-width: 1200px) {
+        background-attachment: inherit;
+      }
+
+    &__container {
+        min-height: 100vh;
+        padding: 200px 0 120px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media screen and (max-width: 1125px) {
+            padding: 200px 25px 120px 25px;  
+        }
+
+        @media screen and (max-width: 700px) {
+            display: flex;
+            justify-content: center;
+          }
+    }
+
+    &__why-wrapper {
+        max-width: 540px;
+        width: 100%;
+    }
+}
+
+
+.why-wrapper {
+    padding-right: 15px;
+
+    @media screen and (max-width: 700px) {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+    &__title-why {
+        font-size: 36px;
+        font-family: 'Aleo', Arial, Helvetica, sans-serif;
+        margin-bottom: 60px;
+    }
+
+    &__text-why {
+        font-size: 16px;
+        font-weight: $fontWeightLight;
+        color: $primaryLightGrey;
+        line-height: 26px;
+        letter-spacing: 1.6px;
+        margin-bottom: 50px;
+    }
+}
+.img-wrapper {
+    padding-left: 15px;
+
+    @media screen and (max-width: 700px) {
+        display: none;
+      }
+}
+
+.photo-wrapper {
+    &__photo-first {
+        margin-right: 125px;
+        margin-bottom: 10px;
+
+        @media screen and (max-width: 1024px) {
+            margin-right: 0;
+          }
+    }
+
+    &__photo-last {
+        margin-left: 125px;
+
+        @media screen and (max-width: 1024px) {
+            margin-left: 0;
+          }
+    }
+}

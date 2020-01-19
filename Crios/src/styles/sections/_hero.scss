@@ -1,0 +1,24 @@
+@import "./../constants/index.scss";
+@import "./../mixins.scss";
+
+.hero {
+  min-height: 100vh;
+  background: $primaryGrey url("./../assets/images/bgr.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__container {
+    min-height: 100vh;
+    padding: 165px 0 0 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__title-block {
+    text-align: center;
+    line-height: 60px;
+    margin-bottom: 80px;
+  }
+}
+

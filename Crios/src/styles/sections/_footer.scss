@@ -1,0 +1,18 @@
+@import "./../constants/index.scss";
+@import "./../mixins.scss";
+
+
+.footer {
+
+    min-height: 1465px;
+    background: url(./../../build/assets/images/bgr2.png);
+    background-size: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+}

@@ -1,0 +1,55 @@
+@import "./../constants/index.scss";
+
+.footer {
+    height: 270px;
+    width: 100%;
+    background-color: $primaryFooterGrey;
+    
+    &__container {
+        padding: 120px 0 30px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.footer-logo {
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    &__footer-logo-title {
+        font-size: 24px;
+        font-weight: $fontWeightBold;
+        text-transform: uppercase;
+        letter-spacing: 3.36px;
+        margin-bottom: 10px;
+    }
+
+    &__footer-logo-sub-title {
+        font-size: 15px;
+        letter-spacing: 1.8px;
+        margin-bottom: 30px;
+        font-weight: $fontWeightLight;
+    }
+}
+
+.footer-wrapper {
+    cursor: pointer;
+
+    &__footer-socials {
+        margin-left: 25px;
+
+        &:hover {
+        color: $primaryBlue;
+        }
+    }
+    
+    &__footer-socials:first-child{
+        margin-left: 0px;
+    }
+
+}

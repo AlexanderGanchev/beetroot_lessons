@@ -1,0 +1,49 @@
+@import "./../constants/index.scss";
+@import "./../mixins.scss";
+
+
+.team {
+    background-color: #f7f8fb;
+
+    &__container {
+        min-height: 605px;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 130px;
+    }
+
+    &__team-photo {
+        min-width: 690px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        background: url(./../../build/assets/images/Snowflake3.png);
+        background-repeat: no-repeat;
+    }
+
+    &__team-text {
+        // min-width: 680px;
+        margin-top: 200px;
+        margin-left: 55px;
+        }
+}
+
+.text-content-block {
+    &__block {
+        margin-bottom: 75px;
+    }
+    &__title {
+        &--red {
+            color:#fe3254;
+        }
+    }
+}
+
+.team-text-sign {
+    &__title {
+    margin-bottom: 15px;
+    }
+    &__sub-title {
+        color: #4b5863;
+    }
+}

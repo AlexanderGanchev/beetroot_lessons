@@ -1,0 +1,23 @@
+@import "./../constants/index.scss";
+@import "./../mixins.scss";
+
+.text-content-block {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    line-height: 35px;
+
+    &__title {
+        font-size: 46px;
+        color: #43a9ff;
+        font-weight: $fontWeightMedium;
+        margin-bottom: 43px;
+      }
+
+    &__sub-title {
+        font-size: 16px;
+        font-weight: $fontWeightBase;
+        color: #4b5863;
+        opacity: 0.25;
+    }
+}

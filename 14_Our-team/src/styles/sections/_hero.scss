@@ -1,0 +1,356 @@
+@import "./../constants/index.scss";
+@import "./../mixins.scss";
+
+.hero {
+  min-height: 100vh;
+
+  &__section {
+    @include display-flex(column, center, center);
+    min-height: 100vh;
+    padding: 100px 16px;
+
+    @media screen and (max-width: $deviceSizeSM) {
+      padding: 50px 16px;
+    }
+  }
+
+  &__title-block {
+    margin-bottom: 30px;
+  }
+
+  &__divider {
+    margin-bottom: 40px;
+  }
+}
+
+.title-block {
+  text-align: center;
+
+  &__subtitle {
+    font-family: "Raleway", sans-serif;
+    font-weight: $fontWeightMedium;
+    font-size: 18px;
+    color: $textDisabled;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    font-weight: $fontWeightBlack;
+    font-size: 60px;
+    line-height: 66px;
+    color: $primaryMain;
+    text-transform: uppercase;
+  }
+}
+
+.divider {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+
+  i {
+    position: relative;
+    z-index: 3;
+    font-size: 20px;
+    color: $primaryMain;
+    padding: 0 10px;
+    background-color: $white;
+  }
+
+  &:before {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: $primaryMain;
+  }
+}
+
+.slider-block {
+  width: 100%;
+
+  &__slider {
+    min-height: 560px;
+
+    @media screen and (max-width: $deviceSizeXMD) {
+      min-height: 460px;
+    }
+  }
+
+  &__slide {
+    min-height: 560px;
+
+    @media screen and (max-width: $deviceSizeXMD) {
+      min-height: 460px;
+    }
+  }
+}
+
+.slide {
+  position: relative;
+  display: flex;
+
+  &:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    content: "";
+    width: 1px;
+    height: 100%;
+    background-color: $primaryMain;
+
+    @media screen and (max-width: $deviceSizeSM) {
+     display: none;
+    }
+  }
+
+  &__avatar-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+    padding-right: 70px;
+
+    @media screen and (max-width: $deviceSizeXMD) {
+      padding-right: 40px;
+    }
+
+    @media screen and (max-width: $deviceSizeSM) {
+      padding: 0 0 40px;
+      justify-content: center;
+    }
+  } 
+
+  &__avatar-decor {
+    position: relative;
+    max-width: 418px;
+    padding: 16px;
+  }
+
+  &__avatar-decor-elem {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+   
+    &--top-left {
+      top: 0;
+      left: 0;
+      border-top: 1px solid $primaryMain;
+      border-left: 1px solid $primaryMain;
+    }
+
+    &--top-right {
+      top: 0;
+      right: 0;
+      border-top: 1px solid $primaryMain;
+      border-right: 1px solid $primaryMain;
+    }
+
+    &--bottom-right {
+      bottom: 0;
+      right: 0;
+      border-bottom: 1px solid $primaryMain;
+      border-right: 1px solid $primaryMain;
+    }
+
+    &--bottom-left {
+      bottom: 0;
+      left: 0;
+      border-bottom: 1px solid $primaryMain;
+      border-left: 1px solid $primaryMain;
+    }
+  }
+
+  &__avatar {
+    height: 386px;
+    width: 386px;
+    border: 1px solid $primaryMain;
+
+    &--photo {
+      width: 100%;
+    }
+
+    @media screen and (max-width: $deviceSizeXMD) {
+      height: 290px;
+      width: 290px;
+    }
+  }
+
+  &__data-block {
+    width: 50%;
+    padding-left: 70px;
+    text-align: center;
+    margin-top: 70px;
+
+    @media screen and (max-width: $deviceSizeXMD) {
+      padding-right: 40px;
+    }
+
+    @media screen and (max-width: $deviceSizeSM) {
+      padding: 40px 0 0;
+    }
+  }
+
+  @media screen and (max-width: $deviceSizeSM) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__data-title {
+    font-size: 36px;
+    font-weight: $fontWeightBlack;
+    color: $textSecondary;
+    margin-bottom: 30px;
+  }
+
+  &__data-subtitile {
+    font-size: 24px;
+    font-weight: $fontWeightLight;
+    color: $textSecondary;
+    margin-bottom: 30px;
+  }
+
+  &__data-socials {
+    flex-direction: row;
+    color: $textHint;
+  
+    &--items {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 30px;
+    }
+
+    &--list{
+    margin: 0 10px;
+    border: 2px solid $textHint;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    }
+
+    .fab {
+      color: $textHint;
+      transform: translate(0, 10%);
+    }
+  }
+
+
+  &__data-text {
+    font-size: 14px;
+    color: $textSecondary;
+    font-weight: $fontWeightMedium;
+    line-height: 24px;
+    margin-bottom: 25px;
+  }
+
+  &__data-buttom {
+    width: 120px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+
+    &--btn {
+      font-size: 14px;
+      font-weight: $fontWeightBold;
+      text-transform: uppercase;
+      color:$textSecondary;
+      border: 1px solid $primaryMain;
+      padding: 0 12px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &:hover {
+      transform: translateY(-2px) scale(1.02);
+      background-color: $primaryMain;
+    }
+  }
+
+&__data-decor {
+    margin-bottom: 25px;
+
+  &--items {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+
+  &--short{
+    content: "";
+    width: 10px;
+    height: 4px;
+    background-color: $primaryMain;
+  }
+  
+  &--long {
+    margin: 0 5px;
+    content: "";
+    width: 20px;
+    height: 4px;
+    background-color: $primaryMain;
+  }
+}
+}
+
+.underline {
+  position: relative;
+  width: 100%;
+  max-width: 490px;
+  margin-bottom: 60px;
+
+  &:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    content: "";
+    width: 20%;
+    height: 1px;
+    background-color: $primaryMain;
+  }
+}
+
+
+.slider {  
+
+  &__block-slider-dots {
+    flex-direction: row;
+    margin-top: 40px;
+    cursor: pointer;
+  
+    &--items {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+    }
+
+    &--paint {
+      border: 1px solid $primaryMain;
+      background-color: $primaryMain ;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    &--empty {
+      margin: 0 10px;
+      border: 1px solid $primaryMain;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      }
+  }
+}
+

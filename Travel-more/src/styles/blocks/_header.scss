@@ -1,0 +1,90 @@
+@import "./../constants/index.scss";
+
+.header {
+    position: absolute;
+    top: 100vh;
+    height: 80px;
+    width: 100%;
+    text-align: center;
+    background-color: $primaryBlue;
+    
+    &__container {
+        min-height: 80px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+ 
+    &__nav-item {
+        margin-left: 45px;
+
+    @media screen and (max-width: 700px) and (min-width: 601px) {
+        margin: 0 25px; 
+    }
+    }
+
+    @media screen and (max-width: 1200px) {
+        padding: 0 25px;
+    }
+
+    @media screen and (max-width: 700px) and (min-width: 601px) {
+        padding: 0 25px 0 0;  
+    }
+}
+
+.header-logo-wrapper {
+    &__header-logo {
+    width: 100%;
+    font-size: 24px;
+    font-weight: $fontWeightBold;
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+
+    @media screen and (max-width: 700px) and (min-width: 601px) {
+        display: none;   
+    }
+    }
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    font-family: 'Aleo', Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+
+    @media screen and (max-width: 600px) {
+        display: none;   
+    }
+
+    @media screen and (max-width: 700px) {
+        width: 100%;
+        justify-content: center;
+    }
+
+}
+
+.nav-item {
+    &__menu-nav-item {
+        padding-bottom: 1px;
+    }
+    
+    :hover {
+        border-bottom: 2px solid $white;
+    }
+}
+
+.hamburger-wrapper {
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+
+    &__hamburger {
+        color: $white;
+
+    @media screen and (min-width: 601px)  {
+        display: none;   
+    }
+}
+}
+
